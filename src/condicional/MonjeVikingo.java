@@ -12,6 +12,7 @@ public class MonjeVikingo {
 
 	public void atacar(MonjeVikingo otro) {
 		if (this.estado == "calmado") {
+			this.estado = "normal";
 			otro.recibirAtaque(0);
 		} else if (this.estado == "normal") {
 			otro.recibirAtaque(ATAQUE_BASICO);
@@ -36,7 +37,7 @@ public class MonjeVikingo {
 
 	public void recibirAtaque(int ataque) {
 		if (this.estado == "calmado") {
-			this.estado = "normal";
+			this.estado = "calmado";
 		} else if (this.estado == "normal") {
 			this.estado = "colerico";
 			this.setVida(this.getVida() - ataque);
@@ -54,7 +55,13 @@ public class MonjeVikingo {
 	}
 
 	public void setVida(int vida) {
-		this.vida = vida;
+		if (vida > 0)
+			this.vida = vida;
+		else {
+			this.vida = 0;
+			this.estado = "muerto";
+		}
+			
 	}
 
 	public String getEstado() {
