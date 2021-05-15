@@ -13,7 +13,7 @@ public class MonjeVikingo {
 	public void atacar(MonjeVikingo otro) {
 		if (this.estado == "calmado") {
 			this.estado = "normal";
-			otro.recibirAtaque(0);
+			otro.recibirAtaque(ATAQUE_BASICO);
 		} else if (this.estado == "normal") {
 			otro.recibirAtaque(ATAQUE_BASICO);
 		} else if (this.estado == "colerico") {

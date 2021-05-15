@@ -1,4 +1,4 @@
-package test;
+package testCondicional;
 
 import static org.junit.jupiter.api.Assertions.*;
 
