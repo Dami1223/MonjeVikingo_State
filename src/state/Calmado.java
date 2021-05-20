@@ -4,7 +4,6 @@ public class Calmado extends EstadoMonje {
 
 	public Calmado(MonjeVikingo monje) {
 		super(monje);
-		// TODO Auto-generated constructor stub
 	}
 
 	@Override

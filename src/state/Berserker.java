@@ -4,7 +4,6 @@ public class Berserker extends EstadoMonje {
 
 	public Berserker(MonjeVikingo monje) {
 		super(monje);
-		// TODO Auto-generated constructor stub
 	}
 
 	@Override
@@ -14,7 +13,7 @@ public class Berserker extends EstadoMonje {
 
 	@Override
 	public void recibirDaño(int daño) {
-		if(!monje.restarVida(daño / 2))
+		if (!monje.restarVida(daño / 2))
 			monje.setEstado(new Muerto(monje));
 	}
 

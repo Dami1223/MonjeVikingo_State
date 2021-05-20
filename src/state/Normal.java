@@ -13,17 +13,16 @@ public class Normal extends EstadoMonje {
 
 	@Override
 	public void recibirDaño(int daño) {
-		if(monje.restarVida(daño))
+		if (monje.restarVida(daño))
 			monje.setEstado(new Colerico(monje));
 		else
 			monje.setEstado(new Muerto(monje));
-		
 	}
 
 	@Override
 	public void meditar() {
 		monje.setEstado(new Calmado(monje));
-		
+
 	}
 
 }

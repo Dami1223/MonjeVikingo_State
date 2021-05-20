@@ -9,7 +9,6 @@ public class Colerico extends EstadoMonje {
 	@Override
 	public void atacar(MonjeVikingo otro) {
 		otro.recibirDaño(monje.getAtaque() * 2);
-
 	}
 
 	@Override
